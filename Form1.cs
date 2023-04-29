@@ -300,14 +300,6 @@ namespace Dining_Delight
         {
             if (CartDataGridView.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in CartDataGridView.Rows)
-                {
-                    //update stock
-                    int productId = Convert.ToInt16(row.Cells["ItemId"].Value);
-                    int quantity = Convert.ToInt16(row.Cells["Quantity"].Value);
-                    UpdateStockLevel(productId, quantity);
-                }
-
                 string ItemName = string.Empty;
                 foreach (DataGridViewRow Datarow in CartDataGridView.Rows)
                 {
